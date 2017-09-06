@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
-        <section className="container">
+        <section className="">
             <div className="tile is-ancestor" id="main-panel">
                 <ImagesPanel/>
                 <DesignPanel/>

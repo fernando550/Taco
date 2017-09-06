@@ -7,15 +7,12 @@
         <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         
         <style type="text/css">
             #main-panel{
                 margin: 20px;
-            }
-            #image-item{
-                background: grey;
-                background: hsl(0, 0%, 98%);
-                text-align: center;
             }
             #design-panel{
                 background: grey;
@@ -23,26 +20,23 @@
                 margin-left: 20px;
             }
             #design-container{
-              width: 50%;
+              width: 75%;
               margin: 0 auto;
               text-align: center;
               vertical-align: middle;
             }
-            #design-thumbnail{
-              margin-top: 25%;
+            .loaded-image:hover{
+                outline: 1px solid #ccc;
             }
-            #loaded-image:hover{
-                outline: 1px solid #AAA;
+            .image-item{
+                background: grey;
+                background: hsl(0, 0%, 98%);
+                text-align: center;
             }
         </style>
     </head>
     
     <body>
-        <script>
-            // $(function() {
-            //     $("#loaded-image").draggable().resizable();
-            //  });
-        </script>
         <div id='app'></div>
     </body>
 </html>
