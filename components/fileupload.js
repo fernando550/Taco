@@ -12,8 +12,8 @@ class FileUpload extends React.Component {
     // TODO: do something with -> this.state.file
     console.log('handle uploading-', this.state);
     
-    var newImage = $(`<div class='drag loaded-image' style='display:inline-block'>
-                            <span style='float:right; margin: -3px 0 0 0' onclick='this.parentNode.parentNode.removeChild(this.parentNode); return false;'>
+    var newImage = $(`<div class='drag loaded-image'>
+                            <span onclick='this.parentNode.parentNode.removeChild(this.parentNode); return false;'>
                                 <i class="fa fa-window-close fa-lg" aria-hidden="true"></i>
                             </span>
                             <img src=${this.state.imagePreviewUrl} style='width: 100%; height: 100%'/>
@@ -53,7 +53,7 @@ class FileUpload extends React.Component {
     let {imagePreviewUrl} = this.state;
     let $imagePreview = null;
     if (imagePreviewUrl) {
-      $imagePreview = (<img src={imagePreviewUrl} style={{width: '100%', height: '100%'}}/>)
+      $imagePreview = (<img src={imagePreviewUrl}/>);
     } else {
       $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
     }
@@ -61,13 +61,15 @@ class FileUpload extends React.Component {
     return (
       <div className="previewComponent">
         <form onSubmit={(e)=>this.handleSubmit(e)}>
-          <input className="fileInput" 
-            type="file" 
-            onChange={(e)=>this.handleImageChange(e)} />
-          <button className="submitButton" 
+              <label className="button is-dark" htmlFor="files" id="label">Select Image</label>
+              <input id="files" style={{display:'none'}} type="file" onChange={(e)=>this.handleImageChange(e)}/>
+          <br/>
+          <br/>
+          <button className="button is-dark" 
             type="submit" 
             onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
         </form>
+        <br/>
         <div className="imgPreview">
           {$imagePreview}
         </div>
@@ -77,3 +79,4 @@ class FileUpload extends React.Component {
 }
 
 export default FileUpload;
+

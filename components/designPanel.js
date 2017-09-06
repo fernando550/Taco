@@ -9,7 +9,7 @@ class DesignPanel extends React.Component {
     render() {
         return (
             <div className="tile box" id="design-panel">
-                <div className="box" id="design-container" style={{background: 'cyan'}}>
+                <div className="box" id="design-container">
                 </div>
             </div>
         );
