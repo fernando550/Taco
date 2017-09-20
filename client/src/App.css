@@ -1,0 +1,28 @@
+#main-panel {
+  margin: 20px;
+}
+#design-panel {
+  background: #ccc;
+  background: hsl(0, 0%, 98%);
+  margin-left: 20px;
+}
+#design-container {
+  width: 600px;
+  height: 600px;
+  margin: 20px auto;
+  background: #fff;
+  background: url('https://cdn.shopify.com/s/files/1/0581/6857/t/94/assets/mega-mens-all-shirts.svg?14254984047474125643');
+  background-size: contain;
+  background-repeat:no-repeat;
+  position: relative;
+}
+#design-canvas-div {
+  top:80px;
+  left: 125px;
+  width: 350px;
+  height: 475px;
+  position: absolute;
+}
+canvas:hover {
+  border: 1px solid black;
+}
