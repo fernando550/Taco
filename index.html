@@ -24,34 +24,40 @@
                 margin-left: 20px;
             }
             #design-container{
-              width: 75%;
+              width: 55%;
+              height: 605px;
               margin: 0 auto;
               text-align: center;
               vertical-align: middle;
               background: #fff;
+              background: url('https://cdn.shopify.com/s/files/1/0581/6857/t/94/assets/mega-mens-all-shirts.svg?14254984047474125643');
+              background-size: contain;
+              background-repeat:no-repeat;
             }
             .loaded-image{
-                display:inline-block
+                display: inline-block;
             }
             .loaded-image:hover{
-                outline: 2px solid #ccc;
+                outline: 3px solid #ccc;
+            }
+            .loaded-image:hover > span{
+                display: inline-block;
             }
             .image-item{
                 background: grey;
                 background: hsl(0, 0%, 98%);
                 text-align: center;
+                /*height: 50%;*/
+                /*width: 50%;*/
             }
             span{
                 float:right; 
-                margin: -21px 0 0 0
+                margin: -21px 0 0 0;
+                display: none;
             }
             img{
                 width: 100%; 
                 height: 100%
-            }
-            .is-dark:hover{
-                background: grey;
-                color: black;
             }
         </style>
     </head>

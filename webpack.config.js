@@ -3,7 +3,8 @@ const HtmlPlugin = require('html-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './index.js',
+  //entry: './index.js',
+  entry: './canvas/0index.js',
   
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -13,7 +14,8 @@ module.exports = {
   plugins: [
     new HtmlPlugin({
       title: 'Project Taco',
-      template: './index.html'
+      // template: './index.html'
+      template: './canvas/index.html'
     }),
     
     // new ExtractTextPlugin("bundle.css")
