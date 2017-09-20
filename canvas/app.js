@@ -12,7 +12,10 @@ class App extends React.Component {
   }
   
   componentDidMount() {
-      this.setState({canvasObj: new fabric.Canvas('design-canvas', {preserveObjectStacking: true})})
+      this.setState({canvasObj: new fabric.Canvas('design-canvas', 
+        {
+            preserveObjectStacking: true
+        })})
       console.log('<App> component mounted: canvas loaded');
   }
   

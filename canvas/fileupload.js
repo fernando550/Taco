@@ -54,13 +54,16 @@ class FileUpload extends React.Component {
 		}
 		
 		return (
-			<div>
+			<div className="tile is-child">
 				<form onSubmit={(e)=>this.handleSubmit(e)}>
-				    <label className="button is-dark" htmlFor="files" id="label">Select Image</label>
+				    <label className="button is-dark" htmlFor="files" id="label" style={{width: '120px'}}>
+				    	<span><i className="fa fa-upload" style={{marginRight: '10px', marginTop: '3px'}}></i></span>
+				    	<span>Select Image</span>
+				    </label>
 				    <input id="files" style={{display:'none'}} type="file" onChange={(e)=>this.handleImageChange(e)}/>
 					<br/>
 					<br/>
-					<button className="button is-dark" type="submit" onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
+					<button style={{width: '120px'}} className="button is-dark" type="submit" onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
 				</form>
 			    <br/>
 				<div className="imgPreview">{$imagePreview}</div>

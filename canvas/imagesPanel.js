@@ -43,13 +43,11 @@ class ImagesPanel extends React.Component {
 		}
 		
         return (
-            <div className="tile is-parent is-vertical is-2 boxed" style={{display:'inline-block', width: '15%'}}>
-                <div className="tile is-child">
-                    <FileUpload canvasObj={this.props.canvasObj}/>
-                </div>
+            <div id='design-image-panel' className="tile is-parent is-vertical is-2 boxed">
+                <FileUpload canvasObj={this.props.canvasObj}/>
                 {myImages.map((url,i) => {
                     return (
-                        <div key={i} className="tile is-child box image-item">
+                        <div id='design-item' className="tile is-child box image-item" key={i}>
                             <img onClick={()=>this.appendImage(url)} key={i} src={url} />
                         </div>
                     );

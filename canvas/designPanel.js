@@ -122,17 +122,21 @@ class DesignPanel extends React.Component {
     render() {
         return (
             <div className="tile is-parent is-vertical box" id="design-panel">
-                <div className='tile is-child is-12'>
-                    <div className="btn-group" role="group" aria-label="Basic example" style={{display: 'block'}}>
-                      <button type="button" className="btn btn-secondary" onClick={() => this.commitAction('delete')}>delete</button>
-                      <button type="button" className="btn btn-secondary" onClick={() => this.commitAction('bringForward')}>forward</button>
-                      <button type="button" className="btn btn-secondary" onClick={() => this.commitAction('bringToFront')}>to front</button>
-                      <button type="button" className="btn btn-secondary" onClick={() => this.commitAction('sendBackwards')}>backward</button>
-                      <button type="button" className="btn btn-secondary" onClick={() => this.commitAction('sendToBack')}>to back</button>
-                      <button type="button" className="btn btn-secondary" onClick={() => this.commitAction('flipHorizontally')}>flipX</button>
-                      <button type="button" className="btn btn-secondary" onClick={() => this.commitAction('flipVertically')}>flipY</button>
-                      <button type="button" className="btn btn-secondary">Color</button>
-                      <button type="button" className="btn btn-secondary">Filter</button>
+                <div id='design-toolbar' className='tile is-child is-12'>
+                    <div className="btn-toolbar" role="group" style={{display: 'inline-block'}}>
+                        <div className="btn-group mr-2" role="group" aria-label="First group" style={{display: 'inline-block'}}>
+                            <button title="delete selection" type="button" className="button is-dark" onClick={() => this.commitAction('delete')}><i className='fa fa-trash'></i></button>
+                            <button title="bring forward" type="button" className="button is-dark" onClick={() => this.commitAction('bringForward')}><i className='fa fa-angle-up'></i></button>
+                            <button title="send backwards" type="button" className="button is-dark" onClick={() => this.commitAction('sendBackwards')}><i className='fa fa-angle-down'></i></button>
+                            <button title="pull to front" type="button" className="button is-dark" onClick={() => this.commitAction('bringToFront')}><i className='fa fa-angle-double-up'></i></button>
+                            <button title="push to back" type="button" className="button is-dark" onClick={() => this.commitAction('sendToBack')}><i className='fa fa-angle-double-down'></i></button>
+                        </div>
+                        <div className="btn-group mr-2" role="group" aria-label="Second group" style={{display: 'inline-block'}}>
+                            <button title="flip horizontally" type="button" className="button is-dark" onClick={() => this.commitAction('flipHorizontally')}><i className='fa fa-arrows-h'></i></button>
+                            <button title="flip vertically" type="button" className="button is-dark" onClick={() => this.commitAction('flipVertically')}><i className='fa fa-arrows-v'></i></button>
+                            <button type="button" className="button is-dark">Color</button>
+                            <button type="button" className="button is-dark">Filter</button>
+                        </div>
                     </div>
                 </div>
                 <div className='time is-child'>
